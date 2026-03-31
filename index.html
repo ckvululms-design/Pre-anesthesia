@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>守護毛孩的麻醉旅程｜麻醉前評估指南</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#FCFAF8',      // 溫暖淺奶油色背景
+                            text: '#475569',    // 深灰色內文 (slate-600)
+                            heading: '#EA580C', // 溫暖橘色標題 (orange-600)
+                            gold: '#F59E0B',    // 柔和金黃色 (amber-500)
+                            teal: '#14B8A6',    // 淺藍綠色 (teal-500)
+                            card: '#FFFFFF',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { 
+            font-family: 'Noto Sans TC', sans-serif; 
+            background-color: #FCFAF8; 
+            color: #475569;
+            line-height: 1.7;
+        }
+        /* 隱藏預設的摺疊箭頭，方便我們自訂 */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        .glass-card {
+            background: #FFFFFF;
+            border-radius: 1.5rem; /* 圓潤感 */
+            border: 1px solid rgba(245, 158, 11, 0.1);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.03);
+        }
+        .fade-in { animation: fadeIn 0.8s ease-in-out forwards; opacity: 0; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-gold selection:text-white">
+
+    <!-- Hero Section -->
+    <header class="pt-20 pb-12 px-6 relative text-center fade-in">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4 text-brand-heading tracking-wide">麻醉前評估與安全指南</h1>
+            <p class="text-lg md:text-xl font-medium text-slate-500">基於客觀醫療數據，與您共同為病患制定安全、穩定的診療計畫</p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 pb-16 space-y-10">
+
+        <!-- Concept 1: Risk Mitigation & Airplane Analogy -->
+        <section class="glass-card p-8 md:p-12 fade-in border-t-4 border-t-brand-teal" style="animation-delay: 0.1s;">
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+                <div class="bg-teal-50 p-4 rounded-2xl text-brand-teal shrink-0">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold mb-4 text-brand-heading">麻醉的本質：風險評估與價值權衡</h2>
+                    <div class="text-lg space-y-4">
+                        <p>在臨床實務中，最常見的認知往往以為麻醉前評估的目的是為了讓醫師判定「可不可以麻醉」。</p>
+                        
+                        <div class="border-l-4 border-brand-gold pl-5 py-4 my-5 bg-amber-50/40 rounded-r-xl shadow-sm">
+                            <p class="text-xl font-bold text-slate-800 mb-3">事實上，醫學上不存在「可不可以麻醉」的絕對答案。</p>
+                            <p class="text-slate-700 text-base leading-relaxed mb-3">
+                                醫療團隊在術前的核心工作其實是進行嚴謹的<strong>「調查」</strong>，並根據調查結果，給予病患客觀的 <strong>ASA 生理狀態分級</strong>（美國麻醉醫學會分級標準）。
+                            </p>
+                            <p class="text-slate-700 text-base leading-relaxed">
+                                在大型醫學統計中，每一個 ASA 分級都對應著真實存在的麻醉相關死亡率。評估的核心意義在於提早辨識隱藏變數，盡可能在麻醉前給予處置以<strong>「降階風險」</strong>，讓生理狀態趨於穩定。
+                            </p>
+                        </div>
+
+                        <!-- 可展開收合的 ASA 分級表格 -->
+                        <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden my-6 transition-all duration-300">
+                            <summary class="flex justify-between items-center font-medium cursor-pointer p-5 text-brand-heading hover:bg-orange-50/50 transition-colors">
+                                <div class="flex items-center">
+                                    <svg class="w-6 h-6 mr-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    <span class="text-lg font-bold">點此展開：美國麻醉醫學會 (ASA) 分級與統計風險</span>
+                                </div>
+                                <span class="transition-transform duration-300 group-open:-rotate-180 text-slate-400">
+                                    <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M19 9l-7 7-7-7"></path></svg>
+                                </span>
+                            </summary>
+                            <div class="p-5 border-t border-slate-100 text-slate-600 bg-slate-50/50">
+                                <div class="overflow-x-auto">
+                                    <table class="w-full text-left border-collapse min-w-[700px]">
+                                        <thead>
+                                            <tr class="bg-slate-200/60 text-slate-700">
+                                                <th class="p-3 border-b border-slate-200 font-bold w-2/12 rounded-tl-lg">生理狀態分級</th>
+                                                <th class="p-3 border-b border-slate-200 font-bold w-4/12">狀態說明</th>
+                                                <th class="p-3 border-b border-slate-200 font-bold w-3/12">犬隻平均死亡率</th>
+                                                <th class="p-3 border-b border-slate-200 font-bold w-3/12 rounded-tr-lg">貓隻平均死亡率</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-sm">
+                                            <tr class="hover:bg-white transition-colors">
+                                                <td class="p-3 border-b border-slate-100 font-bold text-brand-teal">ASA 1–2</td>
+                                                <td class="p-3 border-b border-slate-100">健康，或僅有輕微局部疾病</td>
+                                                <td class="p-3 border-b border-slate-100">
+                                                    <span class="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-full font-bold">0.05%</span>
+                                                </td>
+                                                <td class="p-3 border-b border-slate-100">
+                                                    <span class="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-full font-bold">0.07% - 0.11%</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-white transition-colors bg-orange-50/30">
+                                                <td class="p-3 border-b border-slate-100 font-bold text-brand-heading">ASA 3</td>
+                                                <td class="p-3 border-b border-slate-100">中度全身性疾病<br><span class="text-xs text-slate-500">(如早期腎病、心臟病)</span></td>
+                                                <td class="p-3 border-b border-slate-100">
+                                                    <span class="inline-block bg-orange-100 text-orange-800 px-3 py-1 rounded-full font-bold">1.33%</span>
+                                                </td>
+                                                <td class="p-3 border-b border-slate-100">
+                                                    <span class="inline-block bg-orange-100 text-orange-800 px-3 py-1 rounded-full font-bold">0.92% - 2.90%</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-white transition-colors">
+                                                <td class="p-3 border-b border-slate-100 font-bold text-rose-600">ASA 4–5</td>
+                                                <td class="p-3 border-b border-slate-100">重度全身性疾病或瀕危狀態</td>
+                                                <td class="p-3 border-b border-slate-100">
+                                                    <span class="inline-block bg-rose-100 text-rose-800 px-3 py-1 rounded-full font-bold">3.12% 以上</span>
+                                                </td>
+                                                <td class="p-3 border-b border-slate-100">
+                                                    <span class="inline-block bg-rose-100 text-rose-800 px-3 py-1 rounded-full font-bold">7.01% - 33.3%</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="text-xs text-slate-500 mt-4 leading-relaxed">
+                                    * 註：數據來源為 2024 年發表之全球大型實證研究（Redondo et al., 2024）。整體而言，貓咪的麻醉風險通常略高於犬隻。這些數據顯示，當生理狀態提高到 ASA 3 以上時，麻醉相關死亡率會呈現顯著上升。因此，麻醉前檢查的重要性，在於辨識潛在疾病、確認目前狀態是否穩定，並在可能情況下先行治療或調整，使麻醉條件接近較低風險的區間。
+                                </p>
+                            </div>
+                        </details>
+
+                        <p class="font-medium text-slate-800 bg-slate-50 p-5 rounded-xl border border-slate-200">
+                            當評估完成後，溝通的重點將聚焦於一項核心決策：<br>
+                            <span class="text-brand-heading block mt-2">「在了解病患專屬的 ASA 分級與統計上真實存在的麻醉風險後，家屬是否願意承擔該等級的潛在風險，來換取因麻醉而能順利進行的醫療處置（不論是進階檢查、外科治療，或兩者同步）所帶來的好處？」</span>
+                        </p>
+                        
+                        <div class="bg-orange-50/50 p-5 rounded-2xl border border-orange-100 my-4 text-slate-700">
+                            <p class="mb-2">醫學上經常將麻醉過程比喻為一趟飛行：</p>
+                            <ul class="list-disc list-inside space-y-1 ml-2">
+                                <li><strong>誘導麻醉：</strong>如同飛機起飛，是身體機能轉換最劇烈、最需要動力的時刻。</li>
+                                <li><strong>維持麻醉：</strong>等同於在天空中持續且平穩地巡航。</li>
+                                <li><strong>結束麻醉：</strong>如同飛機降落。</li>
+                                <li><strong>恢復期：</strong>降落後直到乘客安穩走下飛機的這段期間，依然屬於麻醉結束後的關鍵階段。</li>
+                            </ul>
+                        </div>
+                        
+                        <p>如同搭乘飛機，醫療處置不存在絕對的零風險。<strong class="text-slate-800">每一次的麻醉，都是為了帶來更長遠的健康與生活品質。</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Concept 2: Life Stage & Dental checks -->
+        <section class="glass-card p-8 md:p-12 fade-in" style="animation-delay: 0.2s;">
+            <h2 class="text-2xl font-bold mb-6 text-brand-heading flex items-center">
+                <svg class="w-7 h-7 mr-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                依循國際指引：結合生命階段 (Life Stage) 的精準評估
+            </h2>
+            <p class="text-lg mb-6">
+                根據美國動物醫院協會 (AAHA) 與美國貓科從業醫師協會 (AAFP) 的指引，麻醉前評估應根據動物所處的生命歷程進行客製化規劃。在安排需要麻醉的醫療處置（如牙周治療）時，臨床上建議同步進行該階段所需的深度健康檢查：
+            </p>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 relative overflow-hidden hover:border-brand-teal transition-colors">
+                    <div class="absolute top-0 right-0 bg-slate-200 text-slate-600 text-xs px-3 py-1 rounded-bl-lg font-bold tracking-wider">1歲以下</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-1 mt-2">幼年期</h3>
+                    <p class="text-brand-teal font-medium text-sm mb-3">核心目標：排除先天性異常</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        著重於篩檢是否有遺傳性或先天性疾病（如先天性心血管異常、肝門脈分流等）。確認器官發育狀態是否能安全代謝麻醉藥物，同時防範幼年動物易發生的低血糖或低體溫風險。
+                    </p>
+                </div>
+                
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 relative overflow-hidden hover:border-brand-teal transition-colors">
+                    <div class="absolute top-0 right-0 bg-slate-200 text-slate-600 text-xs px-3 py-1 rounded-bl-lg font-bold tracking-wider">1至6歲</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-1 mt-2">成年期</h3>
+                    <p class="text-brand-teal font-medium text-sm mb-3">核心目標：建立健康基準線</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        即便外觀健康，仍需確認肝腎代謝與心肺功能正常。此階段的重大意義在於建立個體專屬的「正常生理數據庫 (Baseline)」，做為未來步入中老年後，判斷各項生理數值是否發生退化的精準對照標準。
+                    </p>
+                </div>
+
+                <div class="bg-amber-50/30 p-6 rounded-2xl border border-amber-200 relative overflow-hidden hover:border-brand-gold transition-colors shadow-sm">
+                    <div class="absolute top-0 right-0 bg-brand-gold text-white text-xs px-3 py-1 rounded-bl-lg font-bold tracking-wider">7歲以上</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-1 mt-2">熟齡與老年期</h3>
+                    <p class="text-brand-heading font-medium text-sm mb-3">核心目標：慢性退化與共病盤點</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        高齡動物常伴隨隱匿的慢性腎病、心臟退化或內分泌異常（如貓甲狀腺亢進）。透過更全面的器官功能檢查，醫療團隊得以精準微調麻醉藥物組合、劑量與術中輸液計畫，有效管理潛在併發症。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Concept: The Family's Role (Pre-op Observation & History) -->
+        <section class="glass-card p-8 md:p-12 fade-in border-l-4 border-l-brand-teal" style="animation-delay: 0.25s;">
+            <h2 class="text-2xl font-bold mb-4 text-brand-heading flex items-center">
+                <svg class="w-7 h-7 mr-3 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                家屬的關鍵角色：居家觀察與生活史提供
+            </h2>
+            <div class="text-lg space-y-6">
+                <p>在麻醉與醫療計畫中，<strong>家屬提供的日常觀察與生活史，是醫療團隊極為重要的臨床線索來源</strong>。</p>
+                <p>除了醫院裡的抽血與影像檢查，動物在熟悉的居家環境中的表現，以及過往的生活軌跡，往往能提供儀器無法第一時間察覺的微小變化。建議在術前主動向醫師提供以下兩大面向的資訊：</p>
+                
+                <div class="space-y-4 mt-6">
+                    <h3 class="text-lg font-bold text-slate-800 border-b border-slate-100 pb-2">1. 近期生理觀察</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-center">
+                            <span class="block text-brand-heading font-bold mb-1">食慾與飲水</span>
+                            <span class="text-sm text-slate-600">是否有異常的增加、減少或挑食</span>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-center">
+                            <span class="block text-brand-heading font-bold mb-1">排便與排尿</span>
+                            <span class="text-sm text-slate-600">頻率、尿量、顏色或糞便型態的改變</span>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-center">
+                            <span class="block text-brand-heading font-bold mb-1">體重與精神</span>
+                            <span class="text-sm text-slate-600">近期體重是否有不明變化，或活動力減退</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-lg font-bold text-slate-800 border-b border-slate-100 pb-2">2. 預防醫學與環境暴露史</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-center">
+                            <span class="block text-brand-heading font-bold mb-1">常規預防計畫</span>
+                            <span class="text-sm text-slate-600">疫苗接種紀錄，以及是否定期進行心絲蟲與外寄生蟲預防</span>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-center">
+                            <span class="block text-brand-heading font-bold mb-1">病媒叮咬紀錄</span>
+                            <span class="text-sm text-slate-600">過往是否曾被壁蝨叮咬（此與潛在血液傳染疾病風險高度相關）</span>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-center">
+                            <span class="block text-brand-heading font-bold mb-1">飼養環境與習慣</span>
+                            <span class="text-sm text-slate-600">完全室內飼養或有外出活動習慣（這將影響特定傳染病的暴露程度）</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="font-medium text-slate-700 bg-teal-50/50 p-4 rounded-xl border border-teal-100 mt-6">
+                    這些細微的生活變化與過往病史，將直接影響獸醫師的決策。醫療團隊能藉此評估是否需要在常規的「基礎資料庫」之外，額外安排特定方向的調查（例如額外的傳染病篩檢），使動物的健康狀態能被更完整地揭露與管理。
+                </p>
+            </div>
+        </section>
+
+        <!-- Concept 3: Minimum Database (MDB) -->
+        <section class="glass-card p-8 md:p-12 fade-in" style="animation-delay: 0.3s;">
+            <h2 class="text-2xl font-bold mb-4 text-brand-heading">基礎資料庫 (Minimum Database)</h2>
+            <p class="text-lg mb-8">為了全面評估麻醉風險，客觀的數據收集不可或缺。以下為常見且重要的麻醉前評估項目：</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <!-- Hematology -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                    <h4 class="font-bold text-slate-800 text-lg flex items-center">
+                        <span class="w-2 h-2 rounded-full bg-brand-teal mr-2"></span> 血液學檢查 (全血球計數)
+                    </h4>
+                    <p class="text-slate-600 mt-2">評估紅血球、白血球與血小板的數量及型態。協助醫療團隊確認病患是否有貧血、潛在的發炎感染、脫水，或是凝血功能異常等風險。</p>
+                </div>
+
+                <!-- Biochemistry -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                    <h4 class="font-bold text-slate-800 text-lg flex items-center">
+                        <span class="w-2 h-2 rounded-full bg-brand-teal mr-2"></span> 血清生化檢查
+                    </h4>
+                    <p class="text-slate-600 mt-2">評估重要內臟器官的健康與代謝狀態。藉由確認肝腎功能、血糖及血漿蛋白質等指標，確保身體具備安全代謝與排除麻醉藥物的能力。</p>
+                </div>
+
+                <!-- Rapid Tests -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                    <h4 class="font-bold text-slate-800 text-lg flex items-center">
+                        <span class="w-2 h-2 rounded-full bg-brand-teal mr-2"></span> 傳染病快篩
+                    </h4>
+                    <p class="text-slate-600 mt-2">涵蓋犬四合一（如心絲蟲、艾利希體）或貓三合一（如愛滋、白血病）。潛在的感染性疾病會顯著影響凝血與免疫功能。</p>
+                </div>
+
+                <!-- Urinalysis -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm relative">
+                    <div class="absolute -top-3 right-6 bg-slate-500 text-white text-xs px-3 py-1 rounded-full font-bold tracking-wide">容易被忽略</div>
+                    <h4 class="font-bold text-slate-800 text-lg flex items-center">
+                        <span class="w-2 h-2 rounded-full bg-slate-400 mr-2"></span> 尿液檢查
+                    </h4>
+                    <p class="text-slate-600 mt-2">這是一項容易被忽略的常規項目。腎臟疾病在血液數值出現異常前，往往會先反映在尿液濃縮能力下降或異常的尿蛋白流失上。</p>
+                </div>
+
+                <!-- Thyroid -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                    <h4 class="font-bold text-slate-800 text-lg flex items-center">
+                        <span class="w-2 h-2 rounded-full bg-brand-teal mr-2"></span> 甲狀腺功能評估
+                    </h4>
+                    <p class="text-slate-600 mt-2">熟齡貓常見甲狀腺功能亢進，犬隻則易有甲狀腺低下。甲狀腺素的異常會直接影響麻醉期間的血壓與心率穩定度。</p>
+                </div>
+
+                <!-- Blood Pressure -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                    <h4 class="font-bold text-slate-800 text-lg flex items-center">
+                        <span class="w-2 h-2 rounded-full bg-brand-teal mr-2"></span> 血壓測量
+                    </h4>
+                    <p class="text-slate-600 mt-2">建立清醒狀態下的血壓基準線。這不僅能協助篩檢隱藏的高血壓（常見於腎臟病或內分泌異常），更是麻醉中維持心血管穩定、判斷並及時處置低血壓危機的重要對照參考。</p>
+                </div>
+
+                <!-- Imaging & Advanced Cardiac (Highlighted with Gold) -->
+                <div class="bg-amber-50/30 p-6 rounded-2xl border-2 border-brand-gold shadow-sm md:col-span-2 relative">
+                    <h4 class="font-bold text-slate-800 text-lg flex items-center">
+                        <span class="w-2 h-2 rounded-full bg-brand-gold mr-2"></span> 影像與進階心臟評估 (X光 / 超音波 / 心電圖)
+                    </h4>
+                    <div class="text-slate-600 mt-3 space-y-4">
+                        <p>
+                            <strong>基礎影像：</strong>X光可協助檢視心肺輪廓與氣管結構，防範抽血無法看出的物理性異常。
+                        </p>
+                        
+                        <div class="bg-white/80 p-5 rounded-xl border border-amber-200/60 shadow-sm">
+                            <p class="font-bold text-brand-heading mb-2 flex items-center">
+                                <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                進階心臟評估
+                            </p>
+                            <p class="text-sm leading-relaxed mb-4">
+                                若在理學檢查時聽診發現心雜音，或是血液心臟生物標記（如 NT-proBNP）數值異常，醫師會在麻醉前安排<strong>心臟超音波</strong>檢查，以準確評估心臟結構、心輸出量與耐受度。此外，透過<strong>心電圖 (ECG)</strong> 則能確認心臟的電氣傳導是否正常，辨識潛在的心律不整風險。
+                            </p>
+                            
+                            <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-l-slate-400 text-sm leading-relaxed text-slate-700">
+                                <strong>臨床重要認知：</strong>由於麻醉狀態會顯著改變動物的自律神經系統，因此<strong>「麻醉前沒有心律不整」，並不代表「麻醉中絕對不會發生心律不整」</strong>。實際上，面對麻醉中隨時可能出現的心律變化，最關鍵的安全防線依然是仰賴麻醉團隊在術中的嚴密監控與即時處置。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Concept 4: The Reality Check (Limitations of Medicine) -->
+        <section class="glass-card p-8 md:p-12 fade-in" style="animation-delay: 0.4s;">
+            <h2 class="text-2xl font-bold mb-4 text-brand-heading">醫療的侷限性</h2>
+            
+            <div class="space-y-4 text-lg">
+                <p>醫學具備科學基礎，但也存在其侷限性。術前檢查能有效過濾大多數的已知風險，但無法確保能揭露所有的生理隱疾。</p>
+                
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 mt-4 text-slate-600">
+                    <p class="italic">
+                        「臨床上曾有一隻老貓安排洗牙治療，術前的血液與X光檢查均無明顯異常。然而在洗牙恢復後，動物的生理狀況出現異常衰退。經由高階電腦斷層 (CT) 掃描才發現，胸腔深處隱藏著淋巴腫瘤——這是一般常規術前X光因角度與組織重疊而無法顯影的死角。」
+                    </p>
+                </div>
+
+                <p>此類臨床案例顯示：儘管醫療團隊已透過各項檢查盡力進行風險把關，但身體結構的複雜性意味著潛在的未知變數依然存在。</p>
+            </div>
+        </section>
+
+        <!-- Concept 5: Post-Op Care -->
+        <section class="glass-card p-8 md:p-12 fade-in border-l-4 border-l-brand-gold" style="animation-delay: 0.5s;">
+            <h2 class="text-2xl font-bold mb-4 text-brand-heading">麻醉後的照護與追蹤</h2>
+            <div class="text-lg space-y-4">
+                <p>正如飛機降落後乘客步出機艙的過程，手術結束並不代表風險完全解除。麻醉後的恢復期同樣需要嚴謹的監控。</p>
+                <p>醫療團隊會在院內確認動物的心跳、血氧與體溫恢復穩定後，才安排出院。病患出院後，仍需仰賴家屬協助觀察其食慾、精神與排尿狀況。</p>
+                <p class="font-medium text-slate-700">
+                    針對部分高齡或本身有慢性疾病的病患，醫師可能會安排在術後幾天內回診，並進行必要的血液複查（例如腎臟指數追蹤），以確保器官功能在經歷麻醉代謝後已完全恢復基準。
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer / Action -->
+        <div class="text-center pt-8 pb-12 fade-in" style="animation-delay: 0.6s;">
+            <p class="text-slate-500 mb-6 font-medium">若您對評估項目或麻醉流程有任何疑慮，請隨時與主治醫師討論。</p>
+            <button onclick="window.print()" class="bg-brand-heading hover:bg-orange-700 text-white font-bold py-3 px-10 rounded-full transition-all shadow-md hover:shadow-lg">
+                列印或儲存此說明文件
+            </button>
+        </div>
+
+    </main>
+
+</body>
+</html>
