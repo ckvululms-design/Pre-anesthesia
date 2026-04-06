@@ -110,9 +110,9 @@
                                                 <td class="p-3 border-b border-slate-100 font-bold text-brand-teal">ASA 1–2</td>
                                                 <td class="p-3 border-b border-slate-100">
                                                     健康，或患有不影響日常活力的輕微全身性疾病。
-                                                    <details class="mt-2 group">
+                                                    <details class="mt-2 group/sub">
                                                         <summary class="text-xs font-bold text-brand-teal cursor-pointer flex items-center hover:text-teal-700 transition-colors w-fit">
-                                                            <svg class="w-4 h-4 mr-1 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                                            <svg class="w-4 h-4 mr-1 transition-transform group-open/sub:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                                             查看常見狀況舉例
                                                         </summary>
                                                         <div class="mt-2 text-xs text-slate-500 bg-slate-50 p-2.5 rounded border border-slate-100">
@@ -138,9 +138,9 @@
                                                 <td class="p-3 border-b border-slate-100 font-bold text-brand-heading">ASA 3</td>
                                                 <td class="p-3 border-b border-slate-100">
                                                     患有嚴重全身性疾病，會限制部分活動但尚未失能。
-                                                    <details class="mt-2 group">
+                                                    <details class="mt-2 group/sub">
                                                         <summary class="text-xs font-bold text-brand-heading cursor-pointer flex items-center hover:text-orange-700 transition-colors w-fit">
-                                                            <svg class="w-4 h-4 mr-1 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                                            <svg class="w-4 h-4 mr-1 transition-transform group-open/sub:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                                             查看常見狀況舉例
                                                         </summary>
                                                         <div class="mt-2 text-xs text-slate-500 bg-white p-2.5 rounded border border-orange-100/50 shadow-sm">
@@ -166,9 +166,9 @@
                                                 <td class="p-3 border-b border-slate-100 font-bold text-rose-600">ASA 4–5</td>
                                                 <td class="p-3 border-b border-slate-100">
                                                     患有失能性全身性疾病且持續威脅生命，或處於瀕死狀態。
-                                                    <details class="mt-2 group">
+                                                    <details class="mt-2 group/sub">
                                                         <summary class="text-xs font-bold text-rose-600 cursor-pointer flex items-center hover:text-rose-800 transition-colors w-fit">
-                                                            <svg class="w-4 h-4 mr-1 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                                            <svg class="w-4 h-4 mr-1 transition-transform group-open/sub:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                                             查看常見急重症狀況舉例
                                                         </summary>
                                                         <div class="mt-2 text-xs text-slate-500 bg-white p-2.5 rounded border border-rose-100/50 shadow-sm">
@@ -437,12 +437,89 @@
                                 進階心臟評估
                             </p>
                             <p class="text-sm leading-relaxed mb-4">
-                                若在理學檢查時聽診發現心雜音，或是血液心臟生物標記（如 NT-proBNP）數值異常，醫師會在麻醉前安排<strong>心臟超音波</strong>檢查，以準確評估心臟結構、心輸出量與耐受度。此外，透過<strong>心電圖 (ECG)</strong> 則能確認心臟的電氣傳導是否正常，辨識潛在的心律不整風險。
+                                若在理學檢查時聽診發現心雜音、<strong>基礎胸腔 X 光發現心臟輪廓異常（如心臟擴大）</strong>，或是血液心臟生物標記（如 NT-proBNP）數值異常，醫師會在麻醉前安排<strong>心臟超音波</strong>檢查，以準確評估心臟結構、心輸出量與耐受度。此外，透過<strong>心電圖 (ECG)</strong> 則能確認心臟的電氣傳導是否正常，辨識潛在的心律不整風險。
                             </p>
                             
                             <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-l-slate-400 text-sm leading-relaxed text-slate-700">
                                 <strong>臨床重要認知：</strong>由於麻醉狀態會顯著改變動物的自律神經系統，因此<strong>「麻醉前沒有心律不整」，並不代表「麻醉中絕對不會發生心律不整」</strong>。實際上，面對麻醉中隨時可能出現的心律變化，最關鍵的安全防線依然是仰賴麻醉團隊在術中的嚴密監控與即時處置。
                             </div>
+
+                            <!-- 可展開收合的血動力學管理目標表格 -->
+                            <details class="mt-4 group/cardio">
+                                <summary class="flex justify-between items-center font-medium cursor-pointer p-4 bg-white text-amber-800 rounded-xl hover:bg-amber-50 transition-colors border border-amber-200 shadow-sm">
+                                    <div class="flex items-center">
+                                        <svg class="w-5 h-5 mr-2 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                        <span class="text-sm font-bold">點此展開：各類型心臟疾病的麻醉血動力學管理目標</span>
+                                    </div>
+                                    <span class="transition-transform duration-300 group-open/cardio:-rotate-180 text-amber-500">
+                                        <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><path d="M19 9l-7 7-7-7"></path></svg>
+                                    </span>
+                                </summary>
+                                <div class="p-4 mt-3 border border-amber-100 rounded-xl bg-white overflow-x-auto shadow-sm">
+                                    <table class="w-full text-left border-collapse min-w-[800px]">
+                                        <thead>
+                                            <tr class="bg-amber-50 text-amber-900 text-xs">
+                                                <th class="p-3 border-b border-amber-100 font-bold w-1/6 rounded-tl-lg">疾病型態<br><span class="font-normal text-amber-700">(Type of Dysfunction)</span></th>
+                                                <th class="p-3 border-b border-amber-100 font-bold w-1/6">心率<br><span class="font-normal text-amber-700">(Heart Rate, HR)</span></th>
+                                                <th class="p-3 border-b border-amber-100 font-bold w-1/6">前負荷<br><span class="font-normal text-amber-700">(Preload)</span></th>
+                                                <th class="p-3 border-b border-amber-100 font-bold w-1/6">心肌收縮力<br><span class="font-normal text-amber-700">(Contractility)</span></th>
+                                                <th class="p-3 border-b border-amber-100 font-bold w-1/6">體循環阻力 / 後負荷<br><span class="font-normal text-amber-700">(SVR)</span></th>
+                                                <th class="p-3 border-b border-amber-100 font-bold w-1/6 rounded-tr-lg">管理重點與其他<br><span class="font-normal text-amber-700">(SV / PVR)</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-xs text-slate-600">
+                                            <tr class="hover:bg-slate-50 transition-colors">
+                                                <td class="p-3 border-b border-slate-100 font-bold text-slate-800">
+                                                    容積負荷過度<br>Volume Overload<br>
+                                                    <span class="font-normal text-slate-500">(如：瓣膜退化 MMVD、左向右分流)</span>
+                                                </td>
+                                                <td class="p-3 border-b border-slate-100 font-medium text-blue-700">正常～稍高<br><span class="text-slate-500 font-normal">避免心搏過緩</span></td>
+                                                <td class="p-3 border-b border-slate-100 text-amber-700">正常～稍低<br><span class="text-slate-500 font-normal">避免輸液過量導致肺水腫</span></td>
+                                                <td class="p-3 border-b border-slate-100 text-slate-700">維持</td>
+                                                <td class="p-3 border-b border-slate-100 text-emerald-700">正常～稍低<br><span class="text-slate-500 font-normal">降低後負荷促進順向血流，減少逆流</span></td>
+                                                <td class="p-3 border-b border-slate-100 text-slate-600">心搏出量 (SV) 受限，心輸出高度依賴心率代償。</td>
+                                            </tr>
+                                            <tr class="hover:bg-slate-50 transition-colors bg-slate-50/50">
+                                                <td class="p-3 border-b border-slate-100 font-bold text-slate-800">
+                                                    壓力負荷過度<br>Pressure Overload<br>
+                                                    <span class="font-normal text-slate-500">(如：主動脈狹窄 SAS、肺動脈狹窄 PS)</span>
+                                                </td>
+                                                <td class="p-3 border-b border-slate-100 font-medium text-emerald-700">正常～稍低<br><span class="text-slate-500 font-normal">避免心搏過速，確保舒張期充血時間</span></td>
+                                                <td class="p-3 border-b border-slate-100 text-blue-700 font-medium">維持充足<br><span class="text-slate-500 font-normal">心室僵硬需較高充填壓力</span></td>
+                                                <td class="p-3 border-b border-slate-100 text-slate-700">維持</td>
+                                                <td class="p-3 border-b border-slate-100 font-bold text-rose-700">嚴格維持<br><span class="text-slate-500 font-normal">絕對避免 SVR 下降引起致命性低血壓</span></td>
+                                                <td class="p-3 border-b border-slate-100 text-slate-600">SV 固定無法代償；維持肺血管阻力 (PVR) 穩定。</td>
+                                            </tr>
+                                            <tr class="hover:bg-slate-50 transition-colors">
+                                                <td class="p-3 border-b border-slate-100 font-bold text-slate-800">
+                                                    舒張功能障礙<br>Diastolic Dysfunction<br>
+                                                    <span class="font-normal text-slate-500">(如：肥厚性心肌病 HCM)</span>
+                                                </td>
+                                                <td class="p-3 border-b border-slate-100 font-medium text-emerald-700">正常～稍低<br><span class="text-slate-500 font-normal">延長舒張期充血，絕對避免心搏過速</span></td>
+                                                <td class="p-3 border-b border-slate-100 text-blue-700 font-medium">維持充足<br><span class="text-slate-500 font-normal">需足夠壓力擴張心室，但小心肺水腫</span></td>
+                                                <td class="p-3 border-b border-slate-100 text-amber-700">維持或稍低<br><span class="text-slate-500 font-normal">避免誘發左心室出口阻塞 (SAM)</span></td>
+                                                <td class="p-3 border-b border-slate-100 text-slate-700">維持<br><span class="text-slate-500 font-normal">維持冠狀動脈血流灌注</span></td>
+                                                <td class="p-3 border-b border-slate-100 text-slate-600">SV 高度依賴舒張期充血；避免 PVR 升高加重右心負擔。</td>
+                                            </tr>
+                                            <tr class="hover:bg-slate-50 transition-colors bg-slate-50/50">
+                                                <td class="p-3 border-b border-slate-100 font-bold text-slate-800">
+                                                    收縮功能障礙<br>Systolic Dysfunction<br>
+                                                    <span class="font-normal text-slate-500">(如：擴張性心肌病 DCM)</span>
+                                                </td>
+                                                <td class="p-3 border-b border-slate-100 font-medium text-blue-700">正常～稍高<br><span class="text-slate-500 font-normal">代償低落的心搏出量</span></td>
+                                                <td class="p-3 border-b border-slate-100 text-slate-700">正常<br><span class="text-slate-500 font-normal">避免心室過度擴張與積水</span></td>
+                                                <td class="p-3 border-b border-slate-100 font-bold text-blue-700">積極支持<br><span class="text-slate-500 font-normal">常需強心藥物 (Inotropes) 輔助</span></td>
+                                                <td class="p-3 border-b border-slate-100 text-emerald-700">正常～稍低<br><span class="text-slate-500 font-normal">減輕心室射血負擔</span></td>
+                                                <td class="p-3 border-b border-slate-100 text-slate-600">SV 原發性低下；維持正常 PVR。</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="mt-4 p-3 bg-slate-50 rounded-lg text-xs text-slate-600 leading-relaxed border border-slate-100">
+                                        <p><strong>* 肺血管阻力 (Pulmonary Vascular Resistance, PVR) 管理通用原則：</strong><br>
+                                        無論何種心臟疾病（尤其是右心疾病或合併肺動脈高壓時），麻醉中皆應極力避免 PVR 不當升高。臨床上會透過<strong>「維持充足供氧 (防範低血氧)、確保良好通氣 (防範高碳酸血症/酸中毒)、以及積極保溫 (防範低體溫)」</strong>來穩定 PVR，減少右心室的排血阻力與衰竭風險。</p>
+                                    </div>
+                                </div>
+                            </details>
                         </div>
                     </div>
                 </div>
